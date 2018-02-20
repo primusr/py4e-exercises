@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Python Exercise 3</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PY4E - Python for Everybody</title>
+        <script>
+        var _TSUGI = { 
+            ajax_session: false,
+            spinnerUrl: "https://www.dr-chuck.net/tsugi-static/img/spinner.gif",
+            staticroot: "https://www.dr-chuck.net/tsugi-static",
+            window_close_message: "Application complete",
+            session_expire_message: "Your session has expired"
+        }
+        </script>
+        <!-- Tiny bit of JS -->
+        <script src="https://www.dr-chuck.net/tsugi-static/js/tsugiscripts_head.js"></script>
+        <!-- Le styles -->
+        <link href="https://www.dr-chuck.net/tsugi-static/bootstrap-3.1.1/css/bootswatch/cerulean/bootstrap.min.css" rel="stylesheet">
+        <link href="https://www.dr-chuck.net/tsugi-static/js/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet">
+        <link href="https://www.dr-chuck.net/tsugi-static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://www.dr-chuck.net/tsugi-static/css/tsugi.css" rel="stylesheet">
+
+    <style>
+    body {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .navbar {
+      margin-bottom: 20px;
+    }
+    .container_iframe {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+</style>
+<style>
+a[target="_blank"]:after {
+    font-family: "FontAwesome";
+    content: " \f08e";
+}
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    }
+body {
+    top: 0px !important;
+    }
+</style>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://www.py4e.com/tsugi/vendor/tsugi/lib/static/js/html5shiv/html5shiv.js"></script>
+          <script src="https://www.py4e.com/tsugi/vendor/tsugi/lib/static/js/respond/respond.min.js"></script>
+        <![endif]-->
+
+    <script type="text/javascript">CSRF_TOKEN = "TODORemoveThis";</script>
+</head>
+<body>
+<div class="container">
+
+
+<h2 id="exercises">Exercises</h2>
+<p>Exercise 4: Download a copy of the file from <a href="http://www.py4e.com/code3/romeo.txt">www.py4e.com/code3/romeo.txt</a></p>
+<p></p>
+<p>Write a program to open the file <code>romeo.txt</code> and read it line by line. For each line, split the line into a list of words using the <code>split</code> function.</p>
+<p>For each word, check to see if the word is already in a list. If the word is not in the list, add it to the list.</p>
+<p>When the program completes, sort and print the resulting words in alphabetical order.</p>
+<pre><code>Enter file: romeo.txt
+[&#39;Arise&#39;, &#39;But&#39;, &#39;It&#39;, &#39;Juliet&#39;, &#39;Who&#39;, &#39;already&#39;,
+&#39;and&#39;, &#39;breaks&#39;, &#39;east&#39;, &#39;envious&#39;, &#39;fair&#39;, &#39;grief&#39;,
+&#39;is&#39;, &#39;kill&#39;, &#39;light&#39;, &#39;moon&#39;, &#39;pale&#39;, &#39;sick&#39;, &#39;soft&#39;,
+&#39;sun&#39;, &#39;the&#39;, &#39;through&#39;, &#39;what&#39;, &#39;window&#39;,
+&#39;with&#39;, &#39;yonder&#39;]</code></pre>
+<p><strong>Exercise 5:</strong> Write a program to read through the mail box data and when you find line that starts with &quot;From&quot;, you will split the line into words using the <code>split</code> function. We are interested in who sent the message, which is the second word on the From line.</p>
+<p><code>From <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="314245544159545f1f5c50434044504355714452451f50521f4b50">[email&#160;protected]</a> Sat Jan 5 09:14:16 2008</code></p>
+<p>You will parse the From line and print out the second word for each From line, then you will also count the number of From (not From:) lines and print out a count at the end.</p>
+<p>This is a good sample output with a few lines removed:</p>
+<pre><code>python fromcount.py
+Enter a file name: mbox-short.txt
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2a595e4f5a424f4404474b585b5f4b584e6a5f495e044b4904504b">[email&#160;protected]</a>
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ea86859f8399aa878f8e838bc4888f98818f868f93c48f8e9f">[email&#160;protected]</a>
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="275d564e464967524a4e444f09424352">[email&#160;protected]</a>
+
+[...some output removed...]
+
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ae8fbe3daf7fffef3fbb4f8ffe8f1fff6ffe3b4fffeef">[email&#160;protected]</a>
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="412236242f0128343134286f242534">[email&#160;protected]</a>
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a392d3f341a332f2a2f33743f3e2f">[email&#160;protected]</a>
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="422135272c022b3732372b6c272637">[email&#160;protected]</a>
+There were 27 lines in the file with From as the first word</code></pre>
+<p><strong>Exercise 6:</strong> Rewrite the program that prompts the user for a list of numbers and prints out the maximum and minimum of the numbers at the end when the user enters &quot;done&quot;. Write the program to store the numbers the user enters in a list and use the <code>max()</code> and <code>min()</code> functions to compute the maximum and minimum numbers after the loop completes.</p>
+<pre><code>Enter a number: 6
+Enter a number: 2
+Enter a number: 9
+Enter a number: 3
+Enter a number: 5
+Enter a number: done
+Maximum: 9.0
+Minimum: 2.0</code></pre>
+
+
+</div>
+</body>
+</html>
